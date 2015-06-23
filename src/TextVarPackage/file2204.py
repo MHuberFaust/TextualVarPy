@@ -31,6 +31,7 @@ fileList1=[]
 objectToParse = {}
 pythonTempList=[]
 contextObjectList = []
+sigleLine={}
 #t = 'insert filePath to template'
 
 ##
@@ -211,7 +212,7 @@ def parseXML(fileList,inputLineList):
             #    else:
                 objectToParse.setdefault(lineNumber,[]).append(lineText)#removed str cast
 ##add Sigle to objectToParse here!
-                #objectToParse.setdefault(lineNumber,[]).append(sigleLine.setdefault(sigle, lineText)
+                objectToParse.setdefault(lineNumber,[]).append(sigleLine.setdefault(sigle, lineText))
                 #the special case that one line appears several times on the same manuscript is not covered this way
         print ('parseEtree() done')
     print('----objectToParse-----')
